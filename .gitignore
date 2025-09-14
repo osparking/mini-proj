@@ -1,3 +1,4 @@
 
 #자동 생성 js 파일 제거
 **/*.js
+node_modules

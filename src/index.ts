@@ -13,15 +13,15 @@ const todos: Todo[] = [];
 function submitForm (e : SubmitEvent){
   e.preventDefault();
   const newTodo = input.value;
+function display(todo: Todo) : void {
   const newLi = document.createElement("li");
-  newLi.append(newTodo);
+  newLi.append(todo.content);
 
   const checkbox = document.createElement("input")
   checkbox.type = "checkbox";
   newLi.append(checkbox);
 
   todolist.append(newLi);
-  input.value = '';
 }
 
 form.addEventListener("submit", submitForm);

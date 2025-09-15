@@ -18,4 +18,4 @@ button.addEventListener("click", () => {
 
 let todoInput: HTMLInputElement = document.getElementById(
   "todoinput"
-) as HTMLInputElement;
+)! as HTMLInputElement;

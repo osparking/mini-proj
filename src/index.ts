@@ -39,6 +39,9 @@ function display(todo: Todo) : void {
 
   const checkbox = document.createElement("input")
   checkbox.type = "checkbox";
+  checkbox.addEventListener("change", () => {
+    console.log("첵크 바뀜");
+  });
   newLi.append(checkbox);
 
   todolist.append(newLi);

@@ -1,21 +1,5 @@
-function calculateSalary(hoursTaught: number) {
-  return hoursTaught * 50000;
-}
+const form = document.querySelector("form")!;
 
-console.log(`월급 : ${calculateSalary(20 * 8).toLocaleString()}`);
-
-const myDoc: Document = document;
-console.log(document.URL);
-
-let content: unknown = "나는 보통비누를 5 개 구매하였다.";
-const contentLength: number = (content as string).length;
-
-const button = document.getElementById("btn")! as HTMLButtonElement;
-button.addEventListener("click", () => {
-  alert(todoInput.value);
-  todoInput.value = "";
+form.addEventListener("submit", (e) => {
+  console.log("제출됨");
 });
-
-let todoInput: HTMLInputElement = document.getElementById(
-  "todoinput"
-)! as HTMLInputElement;

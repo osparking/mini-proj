@@ -17,6 +17,7 @@ function submitForm (e : SubmitEvent){
     isDone: false
   }
   todos.push(newTodo);
+  localStorage.setItem("todos", JSON.stringify(todos));
   display (newTodo);
   input.value = '';
 }

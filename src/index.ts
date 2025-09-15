@@ -1,6 +1,8 @@
 const form = document.querySelector("form")!;
 
-form.addEventListener("submit", function(e){
+function submitForm (e : SubmitEvent){
   e.preventDefault();
   console.log("제출됨");
-});
+}
+
+form.addEventListener("submit", submitForm);

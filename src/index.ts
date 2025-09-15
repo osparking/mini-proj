@@ -10,6 +10,15 @@ interface Todo {
 
 const todos: Todo[] = [];
 
+function getTodosFromLocalStorage(): Todo[] {
+  const todosJSON = localStorage.getItem("todos");
+  if (todosJSON === null) {
+    return [];
+  } else {
+    return JSON.parse(todosJSON) as Todo[];
+  }
+}
+
 function submitForm (e : SubmitEvent){
   e.preventDefault();
   const newTodo : Todo = {

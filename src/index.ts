@@ -8,7 +8,9 @@ interface Todo {
   isDone: boolean;
 }
 
-const todos: Todo[] = [];
+const todos: Todo[] = getTodosFromLocalStorage();
+
+todos.forEach(display);
 
 function getTodosFromLocalStorage(): Todo[] {
   const todosJSON = localStorage.getItem("todos");

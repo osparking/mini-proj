@@ -8,6 +8,11 @@ function submitForm (e : SubmitEvent){
   const newTodo = input.value;
   const newLi = document.createElement("li");
   newLi.append(newTodo);
+
+  const checkbox = document.createElement("input")
+  checkbox.type = "checkbox";
+  newLi.append(checkbox);
+
   todolist.append(newLi);
   input.value = '';
 }

@@ -3,6 +3,13 @@ const todolist = document.getElementById("todolist")!;
 const todoinput = document.getElementById("todoinput");
 const input = document.querySelector("#todoinput")! as HTMLInputElement;
 
+interface Todo {
+  content: string;
+  isDone: boolean;
+}
+
+const todos: Todo[] = [];
+
 function submitForm (e : SubmitEvent){
   e.preventDefault();
   const newTodo = input.value;

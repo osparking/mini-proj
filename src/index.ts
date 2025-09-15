@@ -12,7 +12,15 @@ const todos: Todo[] = [];
 
 function submitForm (e : SubmitEvent){
   e.preventDefault();
-  const newTodo = input.value;
+  const newTodo : Todo = {
+    content: input.value,
+    isDone: false
+  }
+  todos.push(newTodo);
+  display (newTodo);
+  input.value = '';
+}
+
 function display(todo: Todo) : void {
   const newLi = document.createElement("li");
   newLi.append(todo.content);

@@ -10,7 +10,7 @@ console.log(document.URL);
 let content: unknown = "나는 보통비누를 5 개 구매하였다.";
 const contentLength: number = (content as string).length;
 
-const button = document.getElementById("btn")!;
+const button = document.getElementById("btn")! as HTMLButtonElement;
 button.addEventListener("click", () => {
   alert(todoInput.value);
   todoInput.value = "";

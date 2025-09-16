@@ -41,6 +41,7 @@ function display(todo: Todo) : void {
   checkbox.type = "checkbox";
   checkbox.addEventListener("change", () => {
     todo.isDone = checkbox.checked;
+    localStorage.setItem("todos", JSON.stringify(todos));
   });
   newLi.append(checkbox);
 

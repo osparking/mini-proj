@@ -8,7 +8,7 @@ interface Todo {
   isDone: boolean;
 }
 
-const todos: Todo[] = getTodosFromLocalStorage();
+const todos: Todo[] = getTodosFromLocalStorage() as Todo[];
 
 todos.forEach(display);
 
@@ -43,6 +43,7 @@ function display(todo: Todo) : void {
     todo.isDone = checkbox.checked;
     localStorage.setItem("todos", JSON.stringify(todos));
   });
+  checkbox.checked = todo.isDone;
   newLi.append(checkbox);
 
   todolist.append(newLi);
